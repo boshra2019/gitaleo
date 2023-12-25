@@ -14,10 +14,7 @@ rm -rf networks
 --------------------------
 CELESTIA_WALLET="MY_WALLET"
 CELESTIA_CHAIN="mamaki"
-
 CELESTIA_NODENAME="amir" 
-CELESTIA_WALLET="amir8372"
-CELESTIA_CHAIN="mamaki"
 
 ----------------------------------------------------------
 echo 'export CELESTIA_CHAIN='$CELESTIA_CHAIN >> $HOME/.bash_profile
