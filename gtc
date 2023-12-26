@@ -12,7 +12,6 @@ git clone https://github.com/celestiaorg/celestia-app.git
 git clone https://github.com/celestiaorg/networks
 rm -rf networks
 --------------------------
-CELESTIA_WALLET="MY_WALLET"
 CELESTIA_CHAIN="mamaki"
 CELESTIA_NODENAME="amir" 
 
