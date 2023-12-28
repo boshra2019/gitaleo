@@ -12,7 +12,6 @@ git clone https://github.com/celestiaorg/celestia-app.git
 git clone https://github.com/celestiaorg/networks
 rm -rf networks
 --------------------------
-CELESTIA_NODENAME="amir" 
 ----------------------------------------------------------
 echo 'export CELESTIA_CHAIN='$CELESTIA_CHAIN >> $HOME/.bash_profile
 echo 'export CELESTIA_NODENAME='${CELESTIA_NODENAME} >> $HOME/.bash_profile
