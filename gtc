@@ -16,10 +16,10 @@ s/^max-connections *=.*/max-connections = $max_connections/" $HOME/.celestia-app
 ------------------------------------------------
 pruning_interval
 ------------------------------------------------------
+s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.celestia-app/config/app.toml
 
 sed -i -e "s/^pruning *=.*/pruning = \"custom\"/;\
 s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/;\
-s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.celestia-app/config/app.toml
 
 --------------------------------------------
 
