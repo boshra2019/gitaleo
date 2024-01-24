@@ -16,9 +16,6 @@ s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.celes
 
 sed -i -e "s/^pruning *=.*/pruning = \"custom\"/;\
 s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/;\
-
---------------------------------------------
-
 sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
 
 ---------------------------------------------------
