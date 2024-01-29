@@ -19,7 +19,6 @@ sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/con
 sed -i -e "s/^pruning *=.*/pruning = \"custom\"/;\
 
 ---------------------------------------------------
-sed -i -e "s/^pruning *=.*/pruning = \"custom\"/;\
 
 celestia-appd tendermint unsafe-reset-all --home $HOME/.celestia-app
 
