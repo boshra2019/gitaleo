@@ -18,8 +18,6 @@ sed -i -e "s/^pruning *=.*/pruning = \"custom\"/;\
 ---------------------------------------------------
 celestia-appd config chain-id $CELESTIA_CHAIN
 
-celestia-appd tendermint unsafe-reset-all --home $HOME/.celestia-app
-
 celestia-appd config chain-id $CELESTIA_CHAIN
 celestia-appd config keyring-backend test
 celestia-appd config chain-id $CELESTIA_CHAIN
