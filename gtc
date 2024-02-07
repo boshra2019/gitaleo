@@ -22,7 +22,6 @@ celestia-appd config chain-id $CELESTIA_CHAIN
 
 -------------------------------------------------------
 [Unit]
-  Description=celestia-appd Cosmos daemon
   After=network-online.target
 [Service]
   User=$USER
