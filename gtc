@@ -16,7 +16,6 @@ sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/con
 sed -i -e "s/^pruning *=.*/pruning = \"custom\"/;\
 ---------------------------------------------------
 
-celestia-appd config keyring-backend test
 celestia-appd config chain-id $CELESTIA_CHAIN
 
 -------------------------------------------------------
