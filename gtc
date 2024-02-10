@@ -20,7 +20,6 @@ celestia-appd config chain-id $CELESTIA_CHAIN
 
 -------------------------------------------------------
 [Unit]
-  After=network-online.target
 [Service]
   User=$USER
   ExecStart=$(which celestia-appd) start
