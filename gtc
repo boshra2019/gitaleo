@@ -30,7 +30,6 @@ celestia-appd config chain-id $CELESTIA_CHAIN
 sudo mv $HOME/celestia-appd.service /etc/systemd/system/
 
 ---------------------------------------------------
-sudo mv $HOME/celestia-appd.service /etc/systemd/system/
   WantedBy=multi-user.target
 EOF
 ----------------------------------------------------
@@ -40,6 +39,7 @@ sudo systemctl restart celestia-appd && journalctl -u celestia-appd -f -o cat
 
 ------------------------------------------------------------
 Press CTRL+C to stop the logs
+sudo mv $HOME/celestia-appd.service /etc/systemd/system/
 
 -------------------------------------------------------------
 
