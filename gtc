@@ -16,8 +16,6 @@ sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/con
 sed -i -e "s/^pruning *=.*/pruning = \"custom\"/;\
 
 -------------------------------------------------------
-[Unit]
-[Service]
   User=$USER
   ExecStart=$(which celestia-appd) start
   Restart=on-failure
