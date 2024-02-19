@@ -14,6 +14,7 @@ s/^max-num-outbound-peers *=.*/max-num-outbound-peers = $max_num_outbound_peers/
 s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.celestia-app/config/app.toml
 sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
 sed -i -e "s/^pruning *=.*/pruning = \"custom\"/;\
+  WantedBy=multi-user.target
 
 -------------------------------------------------------
   ExecStart=$(which celestia-appd) start
@@ -21,7 +22,6 @@ sed -i -e "s/^pruning *=.*/pruning = \"custom\"/;\
   LimitNOFILE=65535
 [Install]
 sudo mv $HOME/celestia-appd.service /etc/systemd/system/
-  WantedBy=multi-user.target
   WantedBy=multi-user.target
 
 ---------------------------------------------------
