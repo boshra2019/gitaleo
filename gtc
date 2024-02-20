@@ -15,9 +15,9 @@ s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.celes
 sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
 sed -i -e "s/^pruning *=.*/pruning = \"custom\"/;\
   WantedBy=multi-user.target
+  ExecStart=$(which celestia-appd) start
 
 -------------------------------------------------------
-  ExecStart=$(which celestia-appd) start
   RestartSec=3
   LimitNOFILE=65535
 [Install]
