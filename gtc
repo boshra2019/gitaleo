@@ -16,9 +16,10 @@ sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/con
 sed -i -e "s/^pruning *=.*/pruning = \"custom\"/;\
   WantedBy=multi-user.target
   ExecStart=$(which celestia-appd) start
+  LimitNOFILE=65535
+  LimitNOFILE=65535
 
 -------------------------------------------------------
-  LimitNOFILE=65535
 [Install]
 sudo mv $HOME/celestia-appd.service /etc/systemd/system/
   WantedBy=multi-user.target
