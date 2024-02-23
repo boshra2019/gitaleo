@@ -17,13 +17,13 @@ sed -i -e "s/^pruning *=.*/pruning = \"custom\"/;\
   WantedBy=multi-user.target
   ExecStart=$(which celestia-appd) start
   LimitNOFILE=65535
-  LimitNOFILE=65535
+
 
 -------------------------------------------------------
 [Install]
 sudo mv $HOME/celestia-appd.service /etc/systemd/system/
   WantedBy=multi-user.target
-
+  LimitNOFILE=65535
 ---------------------------------------------------
 EOF
 ----------------------------------------------------
