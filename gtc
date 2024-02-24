@@ -16,8 +16,6 @@ sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/con
 sed -i -e "s/^pruning *=.*/pruning = \"custom\"/;\
   WantedBy=multi-user.target
   ExecStart=$(which celestia-appd) start
-  LimitNOFILE=65535
-
 
 -------------------------------------------------------
 [Install]
@@ -29,6 +27,7 @@ EOF
 ----------------------------------------------------
 sudo systemctl enable celestia-appd
 sudo systemctl restart celestia-appd && journalctl -u celestia-appd -f -o cat
+  LimitNOFILE=65535
 
 ------------------------------------------------------------
 Press CTRL+C to stop the logs
