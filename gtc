@@ -24,7 +24,6 @@ sudo mv $HOME/celestia-appd.service /etc/systemd/system/
 ---------------------------------------------------
 EOF
 ----------------------------------------------------
-sudo systemctl enable celestia-appd
 sudo systemctl restart celestia-appd && journalctl -u celestia-appd -f -o cat
   LimitNOFILE=65535
 
