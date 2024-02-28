@@ -18,7 +18,6 @@ sed -i -e "s/^pruning *=.*/pruning = \"custom\"/;\
 
 -------------------------------------------------------
 [Install]
-sudo mv $HOME/celestia-appd.service /etc/systemd/system/
   WantedBy=multi-user.target
   LimitNOFILE=65535
 ---------------------------------------------------
