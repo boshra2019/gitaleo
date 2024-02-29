@@ -18,7 +18,6 @@ sed -i -e "s/^pruning *=.*/pruning = \"custom\"/;\
 
 -------------------------------------------------------
 [Install]
-  WantedBy=multi-user.target
   LimitNOFILE=65535
 ---------------------------------------------------
 EOF
