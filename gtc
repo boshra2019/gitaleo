@@ -13,13 +13,13 @@ s/^max-num-outbound-peers *=.*/max-num-outbound-peers = $max_num_outbound_peers/
 ------------------------------------------------------
 s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.celestia-app/config/app.toml
 sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
-sed -i -e "s/^pruning *=.*/pruning = \"custom\"/;\
 
 -------------------------------------------------------
 [Install]
   LimitNOFILE=65535
 ---------------------------------------------------
-EOF
+sed -i -e "s/^pruning *=.*/pruning = \"custom\"/;\
+
 ----------------------------------------------------
 sudo systemctl restart celestia-appd && journalctl -u celestia-appd -f -o cat
   LimitNOFILE=65535
