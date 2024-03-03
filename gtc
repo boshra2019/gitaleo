@@ -16,7 +16,6 @@ sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/con
 
 -------------------------------------------------------
 [Install]
-  LimitNOFILE=65535
 ---------------------------------------------------
 sed -i -e "s/^pruning *=.*/pruning = \"custom\"/;\
 
