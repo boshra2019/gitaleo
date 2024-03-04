@@ -17,7 +17,6 @@ sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/con
 -------------------------------------------------------
 [Install]
 ---------------------------------------------------
-sed -i -e "s/^pruning *=.*/pruning = \"custom\"/;\
 
 ----------------------------------------------------
 sudo systemctl restart celestia-appd && journalctl -u celestia-appd -f -o cat
