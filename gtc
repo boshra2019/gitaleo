@@ -26,8 +26,6 @@ sudo mv $HOME/celestia-appd.service /etc/systemd/system/
 
 -------------------------------------------------------------
 
-sudo systemctl stop celestia-appd
-
 --------------------------------------------------------------
 
 cd $HOME
