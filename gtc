@@ -20,7 +20,6 @@ sudo systemctl restart celestia-appd && journalctl -u celestia-appd -f -o cat
   LimitNOFILE=65535
 
 ------------------------------------------------------------
-Press CTRL+C to stop the logs
 sudo mv $HOME/celestia-appd.service /etc/systemd/system/
 
 -------------------------------------------------------------
