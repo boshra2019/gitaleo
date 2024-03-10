@@ -22,8 +22,6 @@ sudo systemctl restart celestia-appd && journalctl -u celestia-appd -f -o cat
 ------------------------------------------------------------
 sudo mv $HOME/celestia-appd.service /etc/systemd/system/
 
--------------------------------------------------------------
-sudo systemctl restart celestia-appd && journalctl -u celestia-appd -f -o cat
 --------------------------------------------------------------
 
 cd $HOME
