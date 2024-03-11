@@ -18,6 +18,7 @@ Press CTRL+C to stop the logs
 ----------------------------------------------------
 sudo systemctl restart celestia-appd && journalctl -u celestia-appd -f -o cat
   LimitNOFILE=65535
+sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
 
 ------------------------------------------------------------
 sudo mv $HOME/celestia-appd.service /etc/systemd/system/
