@@ -22,6 +22,7 @@ sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/con
 
 ------------------------------------------------------------
 sudo mv $HOME/celestia-appd.service /etc/systemd/system/
+sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
 
 --------------------------------------------------------------
 
