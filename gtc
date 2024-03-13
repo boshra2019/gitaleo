@@ -13,7 +13,6 @@ s/^max-num-outbound-peers *=.*/max-num-outbound-peers = $max_num_outbound_peers/
 ------------------------------------------------------
 s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.celestia-app/config/app.toml
 sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
-Press CTRL+C to stop the logs
 
 ----------------------------------------------------
 sudo systemctl restart celestia-appd && journalctl -u celestia-appd -f -o cat
@@ -23,6 +22,7 @@ sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/con
 ------------------------------------------------------------
 sudo mv $HOME/celestia-appd.service /etc/systemd/system/
 sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
+Press CTRL+C to stop the logs
 
 --------------------------------------------------------------
 
