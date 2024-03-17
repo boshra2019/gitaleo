@@ -15,7 +15,6 @@ sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/con
 sudo systemctl restart celestia-appd && journalctl -u celestia-appd -f -o cat
 
 ----------------------------------------------------
-  LimitNOFILE=65535
 sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
 
 ------------------------------------------------------------
