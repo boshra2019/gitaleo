@@ -17,8 +17,6 @@ sudo systemctl restart celestia-appd && journalctl -u celestia-appd -f -o cat
 ----------------------------------------------------
 sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
 
-------------------------------------------------------------
-sudo mv $HOME/celestia-appd.service /etc/systemd/system/
 --------------------------------------------------------------
 sudo mv $HOME/celestia-appd.service /etc/systemd/system/
 
