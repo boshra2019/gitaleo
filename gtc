@@ -34,6 +34,7 @@ sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/con
 
 --------------------------------------------------
 sudo systemctl restart celestia-appd && journalctl -u celestia-appd -f -o cat
+SNAP_NAME=$(curl -s https://snaps.qubelabs.io/celestia/ | \
 
 -------------------------------------------------
 CTRL+C را فشار دهید تا لاگ ها متوقف شوند
