@@ -20,7 +20,6 @@ sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/con
 
 --------------------------------------------------------------
 cd $HOME
-    egrep -o ">mamaki.*tar" | tr -d ">")
 wget -O - https://snaps.qubelabs.io/celestia/${SNAP_NAME} | tar xf - \
     -C ~/.celestia-app/data/
 sudo systemctl restart celestia-appd && journalctl -u celestia-appd -f -o cat
