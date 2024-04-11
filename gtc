@@ -25,7 +25,6 @@ wget -O - https://snaps.qubelabs.io/celestia/${SNAP_NAME} | tar xf - \
     -C ~/.celestia-app/data/
 sudo systemctl restart celestia-appd && journalctl -u celestia-appd -f -o cat
 sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
-sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
 
 ------------------------------------------------------------------
 منتظر بمانید تا گره شما اکثر بلوک ها را از زنجیره بلوکی Celestia دانلود کند
@@ -38,6 +37,7 @@ SNAP_NAME=$(curl -s https://snaps.qubelabs.io/celestia/ | \
 -------------------------------------------------
 CTRL+C را فشار دهید تا لاگ ها متوقف شوند
 SNAP_NAME=$(curl -s https://snaps.qubelabs.io/celestia/ | \
+sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
 
 ---------------------------------
 قبل از ادامه، با کد زیر مطمئن شوید که به طور کامل با شبکه همگام شده اید 
