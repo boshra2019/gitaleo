@@ -30,10 +30,10 @@ sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/con
 ------------------------------------------------------------------
 منتظر بمانید تا گره شما اکثر بلوک ها را از زنجیره بلوکی Celestia دانلود کند
 sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
+SNAP_NAME=$(curl -s https://snaps.qubelabs.io/celestia/ | \
 
 --------------------------------------------------
 sudo systemctl restart celestia-appd && journalctl -u celestia-appd -f -o cat
-SNAP_NAME=$(curl -s https://snaps.qubelabs.io/celestia/ | \
 
 -------------------------------------------------
 CTRL+C را فشار دهید تا لاگ ها متوقف شوند
