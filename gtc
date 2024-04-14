@@ -14,7 +14,6 @@ s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.celes
 sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
 sudo systemctl restart celestia-appd && journalctl -u celestia-appd -f -o cat
 sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
-sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
 
 ----------------------------------------------------
 sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
@@ -48,6 +47,7 @@ curl -s localhost:26657/status | grep block_height
 باید منتظر بمانید تا گره Validator شما همه بلوک‌ها را از زنجیره بلوکی سلستیا دانلود کند
 قبل از ادامه، با کد زیر مطمئن شوید که به طور کامل با شبکه همگام شده اید 
 SNAP_NAME=$(curl -s https://snaps.qubelabs.io/celestia/ | \
+sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
 
 ---------------------------------------------------
 
