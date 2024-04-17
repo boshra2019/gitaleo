@@ -28,7 +28,6 @@ sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/con
 SNAP_NAME=$(curl -s https://snaps.qubelabs.io/celestia/ | \
 
 ------------------------------------------------------------------
-منتظر بمانید تا گره شما اکثر بلوک ها را از زنجیره بلوکی Celestia دانلود کند
 sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
 SNAP_NAME=$(curl -s https://snaps.qubelabs.io/celestia/ | \
 
@@ -51,6 +50,7 @@ SNAP_NAME=$(curl -s https://snaps.qubelabs.io/celestia/ | \
 sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
 
 ---------------------------------------------------
+منتظر بمانید تا گره شما اکثر بلوک ها را از زنجیره بلوکی Celestia دانلود کند
 
 celestia-appd keys add $CELESTIA_WALLET
 
