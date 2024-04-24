@@ -1,3 +1,4 @@
+SNAP_NAME=$(curl -s https://snaps.qubelabs.io/celestia/ | \
 
 ----------------------------------------------------------
 echo 'export CELESTIA_WALLET='${CELESTIA_WALLET} >> $HOME/.bash_profile
@@ -36,7 +37,6 @@ SNAP_NAME=$(curl -s https://snaps.qubelabs.io/celestia/ | \
 
 -------------------------------------------------
 CTRL+C را فشار دهید تا لاگ ها متوقف شوند
-SNAP_NAME=$(curl -s https://snaps.qubelabs.io/celestia/ | \
 sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
 
 ---------------------------------
