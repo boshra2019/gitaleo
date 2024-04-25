@@ -8,7 +8,6 @@ BOOTSTRAP_PEERS=$(curl -sL https://raw.githubusercontent.com/celestiaorg/network
 sed -i 's/peer-gossip-sleep-duration *=.*/peer-gossip-sleep-duration = "2ms"/g' $HOME/.celestia-app/config/config.toml
 ----------------------------------------------------------------
 s/^max-num-inbound-peers *=.*/max-num-inbound-peers = $max_num_inbound_peers/;\
-s/^max-num-outbound-peers *=.*/max-num-outbound-peers = $max_num_outbound_peers/;\
 ------------------------------------------------------
 s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.celestia-app/config/app.toml
 sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
