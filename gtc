@@ -19,7 +19,6 @@ cd $HOME
 
 --------------------------------------------------------------
 cd $HOME
-    -C ~/.celestia-app/data/
 sudo systemctl restart celestia-appd && journalctl -u celestia-appd -f -o cat
 sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
 SNAP_NAME=$(curl -s https://snaps.qubelabs.io/celestia/ | \
@@ -28,6 +27,7 @@ SNAP_NAME=$(curl -s https://snaps.qubelabs.io/celestia/ | \
 sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/config/app.toml
 SNAP_NAME=$(curl -s https://snaps.qubelabs.io/celestia/ | \
 wget -O - https://snaps.qubelabs.io/celestia/${SNAP_NAME} | tar xf - \
+    -C ~/.celestia-app/data/
 
 --------------------------------------------------
 sudo systemctl restart celestia-appd && journalctl -u celestia-appd -f -o cat
